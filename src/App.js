@@ -7,13 +7,13 @@ import Todos from './components/Todos';
 const todosData = [
   {
     id: uuidv4(),
-    title: 'read react documentation',
-    desc: 'react documentation might be boring but I can do it'
+    title: 'Read react documentation',
+    desc: 'React documentation might be boring but I can do it'
   },
   {
     id: uuidv4(),
-    title: 'do react assignment',
-    desc: 'react assignments might be boring but I can do it'
+    title: 'Do react assignment',
+    desc: 'React assignments might be boring but I can do it'
   }
 ];
 
@@ -21,12 +21,17 @@ const App = () => {
   const [todos, setTodos] = useState(todosData);
 
   // get the newTodo from NewTodo.js here inside this function
-  const handleAddTodo = () => {};
+  const handleAddTodo = (todo) => {
+    setTodos((oldTodo) => {
+      return [...oldTodo, todo];
+    });
+  };
+  console.log(todos);
 
   return (
-    <div>
-      <NewTodo />
-      <Todos />
+    <div className="container">
+      <NewTodo onAddTodo={handleAddTodo} />
+      <Todos todos={todos} />
     </div>
   );
 };

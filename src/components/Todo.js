@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Todo = (props) => {
+  console.log(props);
   const { title, desc } = props.todo;
   return (
     <article className="todo">
@@ -9,13 +9,6 @@ const Todo = (props) => {
       <p>{desc}</p>
     </article>
   );
-};
-
-Todo.propTypes = {
-  todo: PropTypes.shape({
-    title: PropTypes.string,
-    desc: PropTypes.string
-  })
 };
 
 export default Todo;

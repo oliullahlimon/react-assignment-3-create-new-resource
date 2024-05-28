@@ -66,8 +66,20 @@ form {
   flex-direction: column;
   gap: 1rem;
   color: white;
-  font-family: fantasy;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
 }
+
+input {
+  padding: 5px;
+}
+
+input,
+textarea {
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
 .field-group {
   display: flex;
   flex-direction: column;
@@ -91,7 +103,8 @@ form {
 }
 .todo__title {
   color: yellow;
-  font-family: fantasy;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
 }
 @media screen and (max-width: 992px) {
   .todos {
@@ -108,4 +121,3 @@ form {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
-

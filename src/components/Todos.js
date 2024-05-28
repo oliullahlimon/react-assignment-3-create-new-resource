@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Todo from './Todo';
 
@@ -12,10 +11,6 @@ const Todos = (props) => {
       ))}
     </section>
   );
-};
-
-Todos.propTypes = {
-  todos: PropTypes.array
 };
 
 export default Todos;
